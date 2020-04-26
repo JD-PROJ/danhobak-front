@@ -1,6 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { FullSizeLayout } from '../layouts';
+import LoginContainer from '../containers/Login';
 
-const App = (): JSX.Element => <div />;
+const Index = (): JSX.Element => (
+  <FullSizeLayout>
+    <LoginContainer />
+  </FullSizeLayout>
+);
 
-export default App;
+export default Index;
