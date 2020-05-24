@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { breakPoints, colors } from '../ui';
+import { breakPoints } from '../ui';
 
 const AppWrapper = styled.div`
   display: grid;
@@ -16,10 +16,13 @@ const AppWrapper = styled.div`
 `;
 
 const IntroWrapper = styled.div`
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: ${breakPoints.medium}) {
     display: none;
   }
+  font-size: 2rem;
 `;
 
 const MainWrapper = styled.div`
@@ -27,6 +30,7 @@ const MainWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(to right, #ffe259, #ffa751);
   }
 `;
 
@@ -38,9 +42,9 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => (
         href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
         rel="stylesheet"
       />
-      <style>{`* {padding: 0; margin: 0;font-family: 'Gothic A1', sans-serif;}`}</style>
+      <style>{`* {padding: 0; margin: 0;font-family: 'Gothic A1', sans-serif;} a {text-decoration: none;}`}</style>
     </Head>
-    <IntroWrapper></IntroWrapper>
+    <IntroWrapper>✨</IntroWrapper>
     <MainWrapper>
       <Component {...pageProps} />
     </MainWrapper>

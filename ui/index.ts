@@ -2,7 +2,8 @@ export enum colors {
   primary = '#ffa751',
   warning = '#d64541',
   black = '#2e3131',
-  white = '#eeeeee',
+  grey = '#888',
+  white = '#fff',
 }
 
 export enum breakPoints {
